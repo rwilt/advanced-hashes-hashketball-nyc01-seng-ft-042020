@@ -126,4 +126,61 @@ def game_hash
   }
 end
 
-# Write code here
+def shoe_size(name)
+  ans = 0
+game_hash.each do |k,v|
+
+v.each do |k1, v1|
+v[:players].each do | k1|
+  if k1[:player_name] == name
+ans += k1[:shoe]
+   return ans
+end
+end
+end
+end
+end
+
+def num_points_scored(name)
+  ans = 0
+game_hash.each do |k,v|
+
+v.each do |k1, v1|
+v[:players].each do | k1|
+  if k1[:player_name] == name
+ans += k1[:points]
+   return ans
+end
+end
+end
+end
+end
+
+def team_colors(name)
+game_hash.each do |k,v|
+if v[:team_name] == name
+return v[:colors]
+end
+end
+end
+
+def team_names
+name_arr = []
+game_hash.each do |k,v|
+name_arr.push(v[:team_name] )
+end
+name_arr
+end
+
+
+def player_numbers(team)
+jersey_num = []
+game_hash.each do |k,v|
+if v[:team_name] == team
+v[:players].each do | element|
+  jersey_num.push(element[:number])
+end
+end
+end
+jersey_num
+end
