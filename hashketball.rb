@@ -202,7 +202,7 @@ end
 end
 
 
-def biggest_shoe_size
+def big_shoe_rebounds
  big_shoe = 0
  rebound = 0
 game_hash.each do |k,v|
