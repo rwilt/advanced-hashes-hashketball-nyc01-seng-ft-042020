@@ -128,6 +128,7 @@ end
 
 
 def shoe_size(name)
+  #set up variable to track answer
   ans = 0
 game_hash.each do |k,v|
 
