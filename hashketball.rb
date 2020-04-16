@@ -203,11 +203,17 @@ end
 
 
 def big_shoe_rebounds
+  #set up variables to track shoe size and rebound 
  big_shoe = 0
  rebound = 0
+ #iterate through the hash
 game_hash.each do |k,v|
+  #iterate through the nested hash
 v.each do |k1, v1|
+  #iterate through the players array
 v[:players].each do | k1|
+  #if their shoe size is larger than big_shoe, reset the variable. 
+  #set rebounds to the varible in the same hash as larget shoe
   if k1[:shoe] > big_shoe
     big_shoe = k1[:shoe]
     rebound = k1[:rebounds]
