@@ -200,3 +200,20 @@ end
 end
 end
 end
+
+
+def biggest_shoe_size
+ big_shoe = 0
+game_hash.each do |k,v|
+v.each do |k1, v1|
+v[:players].each do | k1|
+  if k1[:shoe] > big_shoe
+    big_shoe = k1[:shoe]
+    rebound = k1[:rebounds]
+    return rebound
+end
+end
+end
+end
+big_shoe
+end
