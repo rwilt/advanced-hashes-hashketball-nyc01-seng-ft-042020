@@ -126,6 +126,7 @@ def game_hash
   }
 end
 
+
 def shoe_size(name)
   ans = 0
 game_hash.each do |k,v|
