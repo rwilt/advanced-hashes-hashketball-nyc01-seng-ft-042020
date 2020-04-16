@@ -211,7 +211,6 @@ v[:players].each do | k1|
   if k1[:shoe] > big_shoe
     big_shoe = k1[:shoe]
     rebound = k1[:rebounds]
-
 end
 end
 end
