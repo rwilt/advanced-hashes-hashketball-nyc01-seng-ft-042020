@@ -130,12 +130,16 @@ end
 def shoe_size(name)
   #set up variable to track answer
   ans = 0
+  #iterate through outer hash
 game_hash.each do |k,v|
-
+  #iterate through nested hash
 v.each do |k1, v1|
+  #iterate through players
 v[:players].each do | k1|
+  #if player_name is equal to name passed, set "ans" to the value assoaicted w the :shoe key.
   if k1[:player_name] == name
 ans += k1[:shoe]
+#return the answr.
    return ans
 end
 end
