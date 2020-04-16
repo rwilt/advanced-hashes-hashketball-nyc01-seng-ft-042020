@@ -184,3 +184,18 @@ end
 end
 jersey_num
 end
+
+def player_stats(name)
+ stats = []
+game_hash.each do |k,v|
+v.each do |k1, v1|
+v[:players].each do | k1|
+  if k1[:player_name] == name
+stats.push(k1[:player_name], k1[:number],
+k1[:shoe], k1[:points], k1[:rebounds],k1[:assists],k1[:steals],k1[:blocks], k1[:slam_dunks])
+   return stats
+end
+end
+end
+end
+end
